@@ -7,6 +7,7 @@ This repository provides the PyTorch source code of the PARNet proposed in the f
 Jianing Qiu, Frank P.-W. Lo, Yingnan Sun, Siyao Wang, Benny Lo
 <br>
 **Spotlight** at BMVC 2019
+
 ![](assets/parnet_animation.gif)
 
 ## Requirements
