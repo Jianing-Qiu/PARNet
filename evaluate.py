@@ -149,7 +149,7 @@ def evaluate_model(model, dataloaders, criterion, mining_times, ratios, vis_dir,
                     erased_img_preds[eid] = ep
 
         if not is_baseline:
-            print("full_img_preds: ", full_img_preds)
+            # print("full_img_preds: ", full_img_preds)
             main_cams = return_cam(
                 conv_feature_blobs[0], weight_softmax, full_img_preds)
             # if use_ae:
