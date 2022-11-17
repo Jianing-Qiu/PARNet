@@ -146,7 +146,7 @@ def calculate_bbox(rows, cols):
     bottom = np.max(rows)
     left = np.min(cols)
     right = np.max(cols)
-    print("[left, top, right, bottom]: ", [left, top, right, bottom])
+    # print("[left, top, right, bottom]: ", [left, top, right, bottom])
     # bbox.append([left, top, right, bottom])
     return [left, top, right, bottom]
 
@@ -164,8 +164,8 @@ def return_single_bbox_and_region(cam_img, ratio):
         current_sum = np.sum(cam_img[np.where(blobs_labels == label)])
         sum_label[current_sum] = label
 
-    print("sum_label: ", sum_label)
-    print("max(sum_label): ", max(sum_label))
+    # print("sum_label: ", sum_label)
+    # print("max(sum_label): ", max(sum_label))
     rows, cols = np.where(blobs_labels == sum_label[max(sum_label)])
     bbox = calculate_bbox(rows, cols)
     region = (rows, cols)
