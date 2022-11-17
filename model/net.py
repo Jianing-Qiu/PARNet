@@ -16,8 +16,6 @@ sys.path.append(ROOT_DIR)
 import utils
 
 
-vis_dir = 'vis/'
-
 
 def return_bbox_and_region(logits, y, feature_conv, weight_softmax, ratios):
     if torch.is_tensor(y):
@@ -62,7 +60,7 @@ def erase(x_chunk, regions):
 class PARNet(nn.Module):
 
     def __init__(self, num_classes, mining_times, ratios, fe_model='resnet50'):
-        super(Net, self).__init__()
+        super(PARNet, self).__init__()
 
         if fe_model == 'resnet50':
             self.feature_extractor = models.resnet50(pretrained=True)
