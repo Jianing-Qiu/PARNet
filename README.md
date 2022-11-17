@@ -13,6 +13,8 @@ Jianing Qiu, Frank P.-W. Lo, Yingnan Sun, Siyao Wang, Benny Lo
 ## Requirements
 - opencv-python
 - pytorch>=0.4.1
+- matplotlib
+- scikit-image
 
 ## Citation
 If you find this code useful for your research, please consider citing:
