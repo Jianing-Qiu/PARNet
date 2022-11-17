@@ -134,7 +134,7 @@ class PARNet(nn.Module):
         current_ws = self.weight_softmax
         erased_img_logits = {}
         for i in range(self.mining_times):
-            print(">>>>>>>>>>>>>>>>>>>>>>>mining time: ", i)
+            # print(">>>>>>>>>>>>>>>>>>>>>>>mining time: ", i)
             bbox_dict, region_dict = return_bbox_and_region(
                 current_logits, y, current_conv_fb, current_ws, self.ratios)
             bbox_of_mined_regions[i] = bbox_dict
@@ -164,8 +164,8 @@ class PARNet(nn.Module):
                 regions_logits_sub[ratio] = self.region_net(
                     crop_and_zoom(x_chunk, bbox))
             regions_logits[mining_time] = regions_logits_sub
-        print(">>>>>>>>>>>>>>>>>>>>the length of regions_logits: ",
-              len(regions_logits))
+        # print(">>>>>>>>>>>>>>>>>>>>the length of regions_logits: ",
+        #      len(regions_logits))
 
         concat_features = torch.cat(self.gap_feature_blobs, dim=1)
         # print("concat_features size: ", concat_features.size())
